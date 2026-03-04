@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Appointment System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+    <a href="#home" class="logo-link">
+        <img src="hercor logo.jpg" alt="Registrar Logo" class="logo-img">
+        <p>Registrar Appointment System</p>
+    </a>
+</div>
+                <nav class="nav">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#book" class="nav-link">Book Appointment</a>
+                    <a href="#schedule" class="nav-link">View Schedule</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#book" class="book-btn">
+                    <i class=""></i> Book Appointment
+                    </a>
+                    
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Appointment Section -->
+    <section class="section book-section" id="book">
+        <div class="container">
+            <div class="section-header">
+                <h2>Book an Appointment</h2>
+                <p>Fill out the form below to schedule your appointment with our registrar office</p>
+            </div>
+            <div class="form-container">
+                <form id="appointmentForm" class="appointment-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName"><i class="fas fa-user"></i> Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="(+639) 456-7890">
+                        </div>
+                        <div class="form-group">
+                            <label for="appointmentType"><i class="fas fa-list"></i> Appointment Type</label>
+                            <select id="appointmentType" name="appointmentType" required>
+                                <option value="">Select Type</option>
+                                <option value="Document Registration">Document Registration</option>
+                                <option value="Certificate Request">Certificate Request</option>
+                                <option value="Balance Request">Balance Request</option>
+                                <option value="Transcript Certificate">Transcript Certificate</option>
+                                <option value="Diploma">Diploma</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="appointmentDate"><i class="fas fa-calendar"></i> Preferred Date</label>
+                            <input type="date" id="appointmentDate" name="appointmentDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="appointmentTime"><i class="fas fa-clock"></i> Preferred Time</label>
+                            <input type="time" id="appointmentTime" name="appointmentTime" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reason"><i class="fas fa-comment"></i> Reason for Appointment</label>
+                        <textarea id="reason" name="reason" rows="4" required placeholder="Please describe the purpose of your appointment"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-check-circle"></i> Submit Appointment
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="section schedule-section" id="schedule">
+        <div class="container">
+            <div class="section-header">
+                <h2>Appointment Schedule</h2>
+                <p>View all scheduled appointments</p>
+            </div>
+
+            <!-- Calendar View -->
+            <div class="calendar-container" id="calendarContainer">
+                <div class="calendar-header">
+                    <button class="calendar-nav" id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                    <h3 id="currentMonth"></h3>
+                    <button class="calendar-nav" id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="calendar-grid" id="calendarGrid">
+                    <!-- Calendar will be dynamically generated -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Have questions? Send us a message and we'll get back to you</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Office Address</h3>
+                        <p>Registrar Office<br>Lawa-an Roxas City<br> ZIP 5800</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Phone</h3>
+                        <p>(+639) 12-345-678<br>Mon-Fri: 9AM - 5PM</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>info@registrar.hercorcollege.edu.ph<br>support@registrar.hercorcollege.edu.ph</p>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="contactName"><i class="fas fa-user"></i> Your Name</label>
+                            <input type="text" id="contactName" name="contactName" required placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail"><i class="fas fa-envelope"></i> Your Email</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="What is this regarding?">
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment-dots"></i> Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-clipboard-check"></i> Registrar Office</h3>
+                    <p>Your trusted partner for all registrar services. Professional, efficient, and reliable.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#book">Book Appointment</a></li>
+                        <li><a href="#schedule">View Schedule</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Office Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 5:00 PM<br>
+                    Saturday: Closed<br>
+                    Sunday: Closed</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Registrar Appointment System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
